@@ -30,3 +30,19 @@
 *.exe
 *.out
 *.app
+
+# Compiled source #
+###################
+*~
+*.depend
+
+# Codeblocks #
+##############
+*.layout
+
+# Folders #
+##############
+backup/
+obj/
+bin/
+res/
