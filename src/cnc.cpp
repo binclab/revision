@@ -81,7 +81,7 @@ void CNCWindow::on_switch_account()
         std::string name = "Account" + std::to_string(m_notebook.get_n_pages() + 1);
         std::cout << name << std::endl;
         std::map<std::string, WebApp*> m_accounts;
-        m_combotext.append(m_accounts[name]);
+        m_combotext.append(name);
         m_accounts[name] = new WebApp;
         m_notebook.append_page(m_accounts[name]);
     }
