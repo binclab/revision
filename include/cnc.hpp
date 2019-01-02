@@ -22,7 +22,6 @@ protected:
     Gtk::Toolbar m_toolbar;
     Gtk::ComboBoxText m_combotext;
     Gtk::Entry m_title_entry;
-    //WebApp *m_WebApp;
     Gtk::Notebook m_notebook;
     //Gtk::Button m_Button_Quit;
 };

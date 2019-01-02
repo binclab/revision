@@ -16,50 +16,48 @@ CNCWindow::CNCWindow()
     set_has_resize_grip(true);
     set_size_request(1024, 576);
     resize_to_geometry(1024, 576);
-    /*
 
-        std::array<std::string, 5> games = {"WebApp_1","WebApp_2","WebApp_3","WebApp_4","WebApp_5"};
-        for(const auto& game : games)
-        {
-            games_Notebook.append_page(*game, "Game 1");
-            game->load_uri("https://tiberiumalliances.com/home");
-        }
-    */
-    on_title_entry_activate();
+    //on_title_entry_activate();
     //on_subtitle_entry_activate();
     // Header Bar
     {
         m_headerbar.set_show_close_button();
         m_headerbar.pack_start(m_toolbar);
         m_combotext.set_size_request(200, -1);
-        m_combotext.append("Add");
-        //m_combotext.set_active_text("Add");
+        for (int i = 1; i <= 10; i++)
+            m_combotext.append("Account " + std::to_string(i));
+        m_combotext.set_active(0);
         m_headerbar.pack_end(m_combotext);
         m_combotext.signal_changed().connect( sigc::mem_fun(*this, &CNCWindow::on_switch_account));
 
         set_titlebar(m_headerbar);
     }
 
-    WebApp *game_1 = new WebApp;
-    /*WebApp *game_2 = new WebApp;
-    WebApp *game_3 = new WebApp;
-    WebApp *game_4 = new WebApp;
-    WebApp *game_5 = new WebApp;*/
+    WebApp *account1 = new WebApp;
+    WebApp *account2 = new WebApp;
+    WebApp *account3 = new WebApp;
+    WebApp *account4 = new WebApp;
+    WebApp *account5 = new WebApp;
+    WebApp *account6 = new WebApp;
+    WebApp *account7 = new WebApp;
+    WebApp *account8 = new WebApp;
+    WebApp *account9 = new WebApp;
+    WebApp *account10 = new WebApp;
+    m_notebook.append_page(*account1);
+    m_notebook.append_page(*account2);
+    m_notebook.append_page(*account3);
+    m_notebook.append_page(*account4);
+    m_notebook.append_page(*account5);
+    m_notebook.append_page(*account6);
+    m_notebook.append_page(*account7);
+    m_notebook.append_page(*account8);
+    m_notebook.append_page(*account9);
+    m_notebook.append_page(*account10);
 
     m_notebook.set_show_tabs(0);
     add(m_notebook);
-    m_notebook.append_page(*game_1, "Game 1");
-    game_1->load_uri("https://tiberiumalliances.com/home");
-    /*m_notebook.append_page(*game_2, "Game 2");
-    //game_2->load_uri("https://tiberiumalliances.com/home");
-    m_notebook.append_page(*game_3, "Game 3");
-    //game_3->load_uri("https://tiberiumalliances.com/home");
-    m_notebook.append_page(*game_4, "Game 4");
-    //game_4->load_uri("https://tiberiumalliances.com/home");
-    m_notebook.append_page(*game_5, "Game 5");
-    //game_5->load_uri("https://tiberiumalliances.com/home");
-    m_notebook.get_current_page();*/
-    std::cout << "Loading URL" << std::endl;
+    account1->load_uri("file:///home/bret/Documents/Help/Toolbar.htm");
+    //account1->load_uri("https://tiberiumalliances.com/home");
     show_all_children();
 }
 
@@ -74,21 +72,69 @@ void CNCWindow::on_button_quit()
 
 void CNCWindow::on_switch_account()
 {
-    Glib::ustring sz = m_combotext.get_active_text();
-
-    if(sz == "Add")
+    //int n = m_combotext.get_active_row_number();
+    m_notebook.set_current_page(m_combotext.get_active_row_number());
+    /*switch (n)
     {
-        std::string name = "Account" + std::to_string(m_notebook.get_n_pages() + 1);
-        std::cout << name << std::endl;
-        std::map<std::string, WebApp*> m_accounts;
-        m_combotext.append(name);
-        m_accounts[name] = new WebApp;
-        m_notebook.append_page(m_accounts[name]);
+    case 0:
+    {
+        m_notebook.set_current_page(*account1);
+        break;
     }
-    //if(!(sz.empty()))
-    //    std::cout << sz  << std::endl;
-    // Save session
-    // Swithc to new tab
+    case 1:
+    {
+        m_notebook.append_page(*account2);
+        break;
+    }
+    case 2:
+    {
+        m_notebook.append_page(*account3);
+        break;
+    }
+    case 3:
+    {
+        m_notebook.append_page(*account4);
+        break;
+    }
+    case 4:
+    {
+        m_notebook.append_page(*account5);
+        break;
+    }
+    case 5:
+    {
+        m_notebook.append_page(*account6);
+        break;
+    }
+    case 6:
+    {
+        m_notebook.append_page(*account7);
+        break;
+    }
+    case 7:
+    {
+        m_notebook.append_page(*account8);
+        break;
+    }
+    case 8:
+    {
+        m_notebook.append_page(*account9);
+        break;
+    }
+    case 9:
+    {
+        m_notebook.append_page(*account10);
+        break;
+    }
+    }*/
+
+    /*std::string name = "Account" + std::to_string(m_notebook.get_n_pages() + 1);
+    std::cout << name << std::endl;
+    std::map<std::string,WebApp*> m_accounts;
+    m_combotext.append(name);
+    m_accounts[name] = new WebApp;
+    m_notebook.append_page(m_accounts[name]);*/
+
 }
 
 void CNCWindow::on_title_entry_activate()

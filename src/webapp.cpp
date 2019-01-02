@@ -3,11 +3,19 @@
 #include <cstring>
 
 WebApp::WebApp() :
-  Gtk::Widget (webkit_web_view_new())
+    Gtk::Widget (webkit_web_view_new())
 {
-  SoupSession *webkit_get_default_session (void);
-  WebKitSettings *settings = webkit_settings_new ();
-  g_object_set (G_OBJECT(settings), "enable-scripts", FALSE, NULL);
+    /* Create a new websettings and disable java script */
+    WebKitSettings *settings = webkit_settings_new();
+    WebKitCookieManager *cookiejar;
+    webkit_cookie_manager_set_persistent_storage(*this, "cookies.sqlite", WEBKIT_COOKIE_PERSISTENT_STORAGE_SQLITE);
+
+    g_object_set (G_OBJECT(settings), "enable-offline-web-application-cache", TRUE, NULL);
+
+    /* Apply the result */
+    webkit_web_view_set_settings (*this, settings);
+    WebKitCookieManager
+
 }
 
 WebApp::~WebApp()
