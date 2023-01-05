@@ -1,0 +1,19 @@
+{
+  "lesson": {
+    "id": 0,
+    "version": 0.1,
+    "subject": "",
+    "topic": "",
+    "level": 0
+  },
+  "tutorial": {
+    "video": "",
+    "section": ""
+  },
+  "exercises": {
+    "section": ""
+  },
+  "answers": {
+    "section": ""
+  }
+}
