@@ -4,16 +4,16 @@
     "version": 0.1,
     "subject": "Mathematics",
     "topic": "Numbers",
+    "video": "hlmOS2glRfc",
     "level": 2
   },
-  "tutorial": {
-    "video": "hlmOS2glRfc",
-    "section": ""
-  },
-  "exercises": {
-    "section": ""
-  },
-  "answers": {
-    "section": ""
-  }
+  "notes": [
+    "<h1>Types of Numbers</h1>\n<div><h2>Square</h2>\n    <p>Some text here</p></div>"
+  ],
+  "exercises": [
+    "section"
+  ],
+  "answers": [
+    "section"
+  ]
 }

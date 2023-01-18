@@ -1,14 +1,14 @@
 {
   "lesson": {
-    "id": 1,
+    "id": 2,
     "version": 0.1,
     "subject": "Mathematics",
-    "topic": "Numbers",
+    "topic": "Calculator",
     "video": "hlmOS2glRfc",
-    "level": 1
+    "level": 2
   },
   "notes": [
-    "section"
+    "<h1>Types of Numbers</h1><div><h2>Square</h2><p>Some text here</p></div>"
   ],
   "exercises": [
     "section"

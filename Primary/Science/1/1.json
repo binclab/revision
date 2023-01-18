@@ -4,16 +4,16 @@
     "version": 0.1,
     "subject": "Science",
     "topic": "Science Skills",
+    "video": "hlmOS2glRfc",
     "level": 0
   },
-  "tutorial": {
-    "video": "hlmOS2glRfc",
-    "section": ""
-  },
-  "exercises": {
-    "section": ""
-  },
-  "answers": {
-    "section": ""
-  }
+  "notes": [
+    "section"
+  ],
+  "exercises": [
+    "section"
+  ],
+  "answers": [
+    "section"
+  ]
 }

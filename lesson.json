@@ -4,16 +4,16 @@
     "version": 0.1,
     "subject": "",
     "topic": "",
+    "video": "",
     "level": 0
   },
-  "tutorial": {
-    "video": "",
-    "section": ""
-  },
-  "exercises": {
-    "section": ""
-  },
-  "answers": {
-    "section": ""
-  }
+  "tutorial": [
+    "section"
+  ],
+  "exercises": [
+    "section"
+  ],
+  "answers": [
+    "section"
+  ]
 }
