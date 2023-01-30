@@ -4,8 +4,7 @@ function setupFacebook() {
         FB.init({
             appId: '310224639988557',
             cookie: true,
-            xfbml: true,
-            version: 'v15'
+            xfbml: true
         });
 
         FB.AppEvents.logPageView();
