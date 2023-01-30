@@ -5,7 +5,7 @@ function setupFacebook() {
             appId: '310224639988557',
             cookie: true,
             xfbml: true,
-            version: 'v15.0'
+            version: 'v15'
         });
 
         FB.AppEvents.logPageView();
