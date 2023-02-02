@@ -15,7 +15,31 @@
 </head>
 
 <body>
-    <div></div>
+    <nav id="header"
+        style="overflow: hidden; background-color: darkslategray; position: fixed; top: 0px; left: 8px; right: 8px;">
+        <button type="button" onclick="openHome()"><img src="https://www.binclab.com/logo.svg" width=24px height=24px
+                alt="Logo"></img></button>
+        <button type="button" onclick="openTab(event, 'manage', 'block')">Manage</button>
+        <button type="button" onclick="openTab(event, 'create')">Create</button>
+        <button type="button" onclick="logout()" style="display:flex; width: 128px;float: right;align-items: center;
+                justify-content: space-evenly;">
+            <p id="userName" style="float: left;padding-right: 4px;"></p>
+            <img id="userPicture" width=24px height=24px alt="Profile Picture"></img>
+        </button>
+    </nav>
+    <div id="content" style="position:fixed;left:8px;right:8px;top:40px;bottom: 40px;">
+        <div id="login" class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with"
+            data-layout="rounded" data-auto-logout-link="true" data-use-continue-as="false"
+            style="display: flex; position:fixed; inset:0;align-items: center;justify-content: center;"></div>
+        <div id="application" style="display:none" <div id="content"
+            style="position:fixed;left:8px;right:8px;top:40px;bottom: 40px;"></div>>
+        <p>Hello World</p>
+    </div>
+    <nav id=" footer"
+        style="overflow: hidden; background-color: darkslategray; position: fixed; bottom: 0px; left: 8px;right: 8px;">
+        <input src="sync.svg" type="image" wialign-items: stretch;justify-content: space-between;dth=24px height=24px
+            alt="Syncronize" style="float: right;" onclick="clickme()" />
+    </nav>
     <script>
         window.fbAsyncInit = setupFacebook;
     </script>
