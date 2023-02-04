@@ -14,8 +14,6 @@ function setupFacebook() {
 function setupApplication() {
     FB.getLoginStatus(function (response) {
         if (response.status === 'connected') {
-            document.getElementById('login').style.display = 'none';
-            document.getElementById('application').style.display = 'flex';
             setupProfile();
         } else {
             FB.login(function (response) {
@@ -42,7 +40,8 @@ function logout() {
 }
 
 function setupProfile() {
-
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('application').style.display = 'flex';
     FB.api('/me', function (response) {
         document.getElementById('userName').innerHTML = response.name.split(' ')[0];
     });
