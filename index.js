@@ -8,6 +8,7 @@ function setupFacebook() {
     });
 
     FB.AppEvents.logPageView();
+    window.FB.Event.subscribe('auth.statusChange', loginCallback);
     setupApplication(true);
 }
 
@@ -22,10 +23,7 @@ function setupApplication(relogin) {
             FB.api('/me/picture?redirect=0&width=100&height=100', function(response) {
                 document.getElementById("userPicture").src = response.data.url;
             });
-        } else if (relogin) {
-            FB.login();
-            document.location = "https://www.binclab.com/revision";
-        }
+        } else FB.login();
     });
 }
 
@@ -39,4 +37,8 @@ function logout(){
         document.getElementById('application').style.display = 'none';
         document.getElementById('login').style.display = 'flex';
     }
+}
+
+function loginCallback(response){
+    console.log(response);
 }
