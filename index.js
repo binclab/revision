@@ -34,6 +34,9 @@ function openHome() {
 }
 
 function logout(){
-    if(window.confirm('This action will log you out from facebook as well. Proceed?'))
-        FB.logout()
+    if(window.confirm('This action will log you out from facebook as well. Proceed?')){
+        FB.logout();
+        document.getElementById('application').style.display = 'none';
+        document.getElementById('login').style.display = 'flex';
+    }
 }
