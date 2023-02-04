@@ -32,3 +32,8 @@ function setupApplication(relogin) {
 function openHome() {
     document.location = "https://www.binclab.com";
 }
+
+function logout(){
+    if(window.confirm('This action will log you out from facebook as well. Proceed?'))
+        FB.logout()
+}
