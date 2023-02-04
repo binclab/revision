@@ -24,7 +24,7 @@ function setupApplication(relogin) {
             });
         } else if (relogin) {
             FB.login();
-            setupApplication(false);
+            document.location = "https://www.binclab.com/revision";
         }
     });
 }
