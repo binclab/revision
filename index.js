@@ -11,19 +11,24 @@ function setupFacebook() {
     setupApplication(true);
 }
 
-function setupApplication(relogin){
+function setupApplication(relogin) {
     FB.getLoginStatus(function (response) {
         if (response.status === 'connected') {
             document.getElementById('login').style.display = 'none';
             document.getElementById('application').style.display = 'flex';
-            console.log('Logged In');
-        } else if(relogin){
+            FB.api('/me', function (response) {
+                document.getElementById('userName').innerHTML = 'Logout ' + response.name;
+            });
+            FB.api('/me/picture?redirect=0&width=100&height=100', function(response) {
+                document.getElementById("userPicture").src = response.data.url;
+            });
+        } else if (relogin) {
             FB.login();
             setupApplication(false);
         }
     });
 }
 
-function openHome(){
+function openHome() {
     document.location = "https://www.binclab.com";
 }
