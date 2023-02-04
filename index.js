@@ -34,8 +34,8 @@ function openHome() {
 function logout() {
     if (window.confirm('This action will log you out from facebook as well. Proceed?')) {
         FB.logout();
-        document.getElementById('userName').innerHTML = 'Profile';
-        document.getElementById("userPicture").src = null;
+        document.getElementById('userName').innerHTML = '';
+        document.getElementById("userPicture").src = '';
         document.getElementById('application').style.display = 'none';
         document.getElementById('login').style.display = 'flex';
     }
