@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.binclab.revision",
+      "sha256_cert_fingerprints": [
+        "FF:E6:D6:31:4A:B4:91:B7:7A:B9:F8:9C:4C:3D:73:0D:57:30:1D:F8:C3:61:B9:96:BF:FA:BE:C8:41:49:98:06"
+      ]
+    }
+  }
+]
